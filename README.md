@@ -1,8 +1,10 @@
 # calculator
 Esmanur Ulu 231101024
-o Implement support for floating-point numbers. ->[0-9]+(\.[0-9]+)?    { yylval.sayi = atof(yytext); return SAYI; }(\.[0-9]+)? Ondalık kısım
+o Implement support for floating-point numbers. ->[0-9]+(\.[0-9]+)?    { yylval.sayi = atof(yytext); return SAYI; }
+(\.[0-9]+)? Ondalık kısım
 atof(yytext) burası da double sayılar için.
- o Extend the grammar to handle exponentiation (^ or **) and handle error reporting for 
+
+ o Extend the grammar to handle exponentiation (^ or **) and handle error reporting for 
 invalid expressions. üs alma işlemi lex -> "**"                 { return USLU; }
 "^"                  { return USLU; } 
 
