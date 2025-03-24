@@ -1,0 +1,81 @@
+{\rtf1\ansi\ansicpg1254\cocoartf2757
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 CourierNewPSMT;
+\f3\froman\fcharset0 TimesNewRomanPSMT;\f4\fnil\fcharset0 Menlo-Regular;\f5\fnil\fcharset0 HelveticaNeue;
+\f6\fnil\fcharset0 HelveticaNeue-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red255\green255\blue255;
+\red255\green255\blue255;\red246\green249\blue255;\red51\green51\blue51;\red255\green255\blue255;\red31\green31\blue34;
+\red255\green255\blue255;\red246\green249\blue255;\red31\green31\blue34;\red111\green143\blue180;\red232\green232\blue231;
+\red247\green250\blue255;\red31\green32\blue34;\red247\green249\blue255;\red232\green232\blue231;\red31\green31\blue34;
+\red247\green249\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c100000\c100000\c99971;
+\cssrgb\c100000\c100000\c99956;\cssrgb\c97255\c98039\c100000;\cssrgb\c25882\c25882\c25882;\cssrgb\c100000\c100000\c99985;\cssrgb\c16078\c16471\c17647;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c97255\c98039\c100000;\cssrgb\c16078\c16471\c17647;\cssrgb\c50735\c63304\c75790;\cssrgb\c92854\c92853\c92506;
+\cssrgb\c97612\c98402\c99998;\cssrgb\c16153\c16549\c17665;\cssrgb\c97494\c98282\c99999;\cssrgb\c92753\c92753\c92521;\cssrgb\c16103\c16497\c17653;
+\cssrgb\c97374\c98161\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs32 \cf2 \expnd0\expndtw0\kerning0
+Esmanur Ulu 231101024
+\f1\b0\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 o
+\fs26  
+\f3 Implement support for floating-point numbers. ->
+\f1 \cf4 \outl0\strokewidth0 \strokec4 [\cf2 \strokec5 0-9]+(\\.[0-9]+)?    \{ yylval.sayi = atof(yytext); return SAYI; \}
+\f4 \cf6 \cb7 \strokec6 (\\.[0-9]+)? Ondal\uc0\u305 k k\u305 s\u305 m\
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb7 \strokec6 atof(yytext) buras\uc0\u305  da double say\u305 lar i\'e7in.
+\f1 \cf2 \cb1 \strokec8 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f3 \cf2 \outl0\strokewidth0 \uc0\u8232 
+\f2 o 
+\f3 Extend the grammar to handle exponentiation (^ or **) and handle error reporting for 
+\f1 \
+
+\f3 invalid expressions. 
+\f5 \cf6 \cb9 \outl0\strokewidth0 \strokec6 \'fcs alma i\uc0\u351 lemi lex -> 
+\f1 \cf2 \cb1 \strokec8 "**"                 \{ return USLU; \}\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec8 "^"                  \{ return USLU; \} \
+\cf10 \strokec10 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f5 \cf11 \cb12 \outl0\strokewidth0 \'fcs alma i\uc0\u351 lemi yacc -> 
+\f1 \cf2 \cb1 \outl0\strokewidth0 \strokec8 | ifade USLU ifade   \{ $$ = us_al($1, $3); \} \cf10 \strokec10 \
+\cf2 \outl0\strokewidth0 \
+\'97\'97\'97\'97\
+\
+Compile komutlar\uc0\u305  \'f6dev dosyas\u305 ndakilerle ayn\u305 : \
+\outl0\strokewidth0 \strokec8 yacc \strokec13 -d\strokec8  calculator.y\
+lex calculator.l\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec8 gcc lex.yy.c y.tab.c \strokec13 -o\strokec8  hesap_makinesi\cf10 \strokec10 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \outl0\strokewidth0 \
+\'97-\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f5 \cf2 \cb14 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec15 ge\'e7ersiz bir karakter karakter\cb16 \strokec15 \'a0\uc0\u8594 \'a0\cb14 \strokec15 Ge\'e7ersiz karakter\cb1 \strokec15 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \cb14 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec15 mant\uc0\u305 k hatas\u305 . s\u305 f\u305 ra b\'f6lme yap\u305 lamaz.\cb16 \strokec15 \'a0\uc0\u8594 \'a0\cb14 \strokec15 S\uc0\u305 f\u305 ra b\'f6lme hatas\u305 \
+\pard\tx720\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb1 \strokec17 \'97\'97\
+\pard\pardeftab720\partightenfactor0
+
+\f6\b\fs28 \cf2 \cb18 \strokec17 exit
+\fs32 \cb19 \strokec20 \'a0yaz\uc0\u305 larak 
+\f5\b0 \cb19 \strokec20 \'e7\uc0\u305 k\u305 labilir.\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf2 \outl0\strokewidth0 \
+}
