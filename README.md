@@ -28,5 +28,6 @@ error handling
 	•	geçersiz bir karakter → Geçersiz karakter
  <br />
 	•	mantık hatası. sıfıra bölme yapılamaz. → Sıfıra bölme hatası
-——
+ <br />
+ 
 exit yazılarak çıkılabilir.
