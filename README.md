@@ -1,17 +1,23 @@
 # calculator
 Esmanur Ulu 231101024
+<br />
+<br />
+
 o Implement support for floating-point numbers. ->[0-9]+(\.[0-9]+)?    { yylval.sayi = atof(yytext); return SAYI; }
+<br />
 (\.[0-9]+)? Ondalık kısım
+<br />
 atof(yytext) burası da double sayılar için.
-
- o Extend the grammar to handle exponentiation (^ or **) and handle error reporting for 
-invalid expressions. üs alma işlemi lex -> "**"                 { return USLU; }
-"^"                  { return USLU; } 
-
+<br />
+<br />
+. 
+<br />
+üs alma işlemi lex -> "**"                
+             <br />
 üs alma işlemi yacc -> | ifade USLU ifade   { $$ = us_al($1, $3); } 
-
+<br />
 ————
-
+<br />
 Compile komutları ödev dosyasındakilerle aynı: 
 yacc -d calculator.y
 lex calculator.l
