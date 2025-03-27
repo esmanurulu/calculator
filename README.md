@@ -23,8 +23,10 @@ yacc -d calculator.y
 lex calculator.l
 gcc lex.yy.c y.tab.c -o hesap_makinesi
 
-—-
-	•	geçersiz bir karakter karakter → Geçersiz karakter
+<br />
+error handling
+	•	geçersiz bir karakter → Geçersiz karakter
+ <br />
 	•	mantık hatası. sıfıra bölme yapılamaz. → Sıfıra bölme hatası
 ——
 exit yazılarak çıkılabilir.
